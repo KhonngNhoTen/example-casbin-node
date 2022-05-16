@@ -19,8 +19,8 @@ module.exports = async () => {
 
   await enforcer.addRoleForUser("user3", "admin");
   await enforcer.addRoleForUser("admin", "teacher");
-  await enforcer.addPermissionForUser("admin", "/chapter/:id", "DELETE");
-  await enforcer.addPermissionForUser("admin", "/course/:id", "DELETE");
+  await enforcer.addPermissionForUser("admin", "/chapter/:chapter", "DELETE");
+  await enforcer.addPermissionForUser("admin", "/course/:chapter", "DELETE");
 
-  await enforcer.enableAutoSave(true);
+  await enforcer.savePolicy();
 };

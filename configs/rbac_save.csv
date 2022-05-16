@@ -2,8 +2,8 @@ p, student, /chapter, GET
 p, student, /course, GET
 p, teacher, /chapter, POST
 p, teacher, /course, POST
-p, admin, /chapter/:id, DELETE
-p, admin, /course/:id, DELETE
+p, admin, /chapter/:chapter, DELETE
+p, admin, /course/:chapter, DELETE
 g, user1, student
 g, user2, teacher
 g, teacher, student
