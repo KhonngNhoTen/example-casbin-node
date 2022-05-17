@@ -12,6 +12,6 @@ async function Auth(req, res, next) {
   const action = req.method;
   const ok = await enforcer.enforce(user, req.url, action);
   if (ok) next();
-  else res.status(403);
+  else res.sendStatus(403);
 }
 module.exports = Auth;
